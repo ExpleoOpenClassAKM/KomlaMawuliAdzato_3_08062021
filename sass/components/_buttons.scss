@@ -1,0 +1,26 @@
+.btn {
+    width: auto;
+    padding: $dim;
+    border-radius: 2.5*$dim;
+    color: $cd-maincolour;
+    font-size: $dim;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: $colour-secondary; // A faire: ajout du dégradé en animatin
+    border: 0.1*$dim solid $colour-secondary;
+    &__menu {
+        padding-left: 2.5*$dim;
+        padding-right: 2.5*$dim;
+    }
+    &:hover {
+        box-shadow: $dim/4 $dim/4 $dim/4 $dim/4 $cd-footerbackground; // ajouter animation
+    }
+    @include media0-250 {
+        font-size: 0.75*$dim;
+        padding: 0.8*$dim;
+    }
+    @include media250-330 {
+        font-size: $dim;
+        padding: $dim;   
+    }
+}

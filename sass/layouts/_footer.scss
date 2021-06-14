@@ -1,0 +1,54 @@
+.footer {
+    margin: auto;
+    padding: auto;
+    width: 100%;
+    height: auto;
+    background-color: $cd-footerbackground;
+    display: flex;
+}
+
+.footerItems {
+    width: 1450px;
+    margin: auto;
+    padding-left: 1.5*$dim;
+    padding-bottom: 2*$dim;
+    @include media0-250 {
+        margin: auto;
+    }
+    &__logo {
+        font-size: 2*$dim;
+        color: $cd-accent;
+        margin-bottom: 1.5*$dim;
+        margin-top: 1.5*$dim;
+    }
+    &__list {
+        list-style-type: none;
+        &--link {
+            color: $cd-maincolour;
+            text-decoration: none;
+            font-size: 1.5*$dim;
+            display: block;
+            line-height: normal;
+            margin: 0.8*$dim 0;
+            @include media0-250 {
+                font-size: $dim;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &--iconutensils {
+            margin-right: 1.22*$dim;
+            font-size: 1.2*$dim;
+            @include media0-250 {
+                font-size: $dim;
+            }
+        }
+        &--iconhands {
+            margin-right: $dim;
+            font-size: $dim;
+            @include media0-250 {
+            }
+        }
+    }
+}

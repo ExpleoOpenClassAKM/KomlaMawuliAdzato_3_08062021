@@ -1,0 +1,524 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  padding: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  background-color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 0.5rem #363636;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+
+.headerItems {
+  width: 1450px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.headerItems__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  position: relative;
+}
+.headerItems__backbutton {
+  position: absolute;
+  padding-left: 1.5rem;
+  align-self: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.Section {
+  display: flex;
+  flex-direction: column;
+}
+.Section__main {
+  max-width: 1450px;
+  margin: auto;
+}
+.Section__menu {
+  max-width: 1450px;
+  margin: auto;
+}
+
+.footer {
+  margin: auto;
+  padding: auto;
+  width: 100%;
+  height: auto;
+  background-color: #363636;
+  display: flex;
+}
+
+.footerItems {
+  width: 1450px;
+  margin: auto;
+  padding-left: 1.5rem;
+  padding-bottom: 2rem;
+}
+@media screen and (max-width: 250px) {
+  .footerItems {
+    margin: auto;
+  }
+}
+.footerItems__logo {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.footerItems__list {
+  list-style-type: none;
+}
+.footerItems__list--link {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: block;
+  line-height: normal;
+  margin: 0.8rem 0;
+}
+@media screen and (max-width: 250px) {
+  .footerItems__list--link {
+    font-size: 1rem;
+  }
+}
+.footerItems__list--link:hover {
+  text-decoration: underline;
+}
+.footerItems__list--iconutensils {
+  margin-right: 1.22rem;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 250px) {
+  .footerItems__list--iconutensils {
+    font-size: 1rem;
+  }
+}
+.footerItems__list--iconhands {
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+.btn {
+  width: auto;
+  padding: 1rem;
+  border-radius: 2.5rem;
+  color: #f5f5f5;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #FF79DA;
+  border: 0.1rem solid #FF79DA;
+}
+.btn__menu {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.btn:hover {
+  box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #363636;
+}
+@media screen and (max-width: 250px) {
+  .btn {
+    font-size: 0.75rem;
+    padding: 0.8rem;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .btn {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+.mainLocation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  background-color: #e3e3e3;
+}
+.mainLocation__icon {
+  margin-right: 1rem;
+}
+
+.mainIntroduction {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  background-color: #f5f5f5;
+}
+.mainIntroduction__title {
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+@media screen and (max-width: 250px) {
+  .mainIntroduction__title {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .mainIntroduction__title {
+    font-size: 1.65rem;
+    width: 90%;
+  }
+}
+@media (min-width: 330px) and (max-width: 390px) {
+  .mainIntroduction__title {
+    font-size: 1.9rem;
+    width: 89%;
+  }
+}
+@media (min-width: 390px) and (max-width: 460px) {
+  .mainIntroduction__title {
+    font-size: 2rem;
+    width: 78%;
+  }
+}
+@media (min-width: 460px) and (max-width: 560px) {
+  .mainIntroduction__title {
+    font-size: 2rem;
+    width: 66%;
+  }
+}
+@media (min-width: 560px) and (max-width: 800px) {
+  .mainIntroduction__title {
+    font-size: 2rem;
+    width: 58%;
+  }
+}
+.mainIntroduction__subtitle {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #363636;
+}
+@media screen and (max-width: 250px) {
+  .mainIntroduction__subtitle {
+    width: 90%;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .mainIntroduction__subtitle {
+    width: 85%;
+  }
+}
+@media (min-width: 330px) and (max-width: 390px) {
+  .mainIntroduction__subtitle {
+    width: 90%;
+  }
+}
+@media (min-width: 390px) and (max-width: 460px) {
+  .mainIntroduction__subtitle {
+    width: 85%;
+  }
+}
+@media (min-width: 460px) and (max-width: 560px) {
+  .mainIntroduction__subtitle {
+    width: 72%;
+  }
+}
+@media (min-width: 560px) and (max-width: 800px) {
+  .mainIntroduction__subtitle {
+    width: 65%;
+  }
+}
+
+.mainTuto {
+  width: 100%;
+  height: auto;
+  padding-top: 1rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.mainTuto__title {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.mainTuto__box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .mainTuto__box {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .mainTuto__box {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.mainTutoBoxItem {
+  width: auto;
+  height: 4rem;
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .mainTutoBoxItem {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .mainTutoBoxItem {
+    width: 30%;
+  }
+}
+.mainTutoBoxItem__panel {
+  position: relative;
+  margin-left: 1rem;
+  border: 0.2rem solid #f5f5f5;
+  box-shadow: 0.3rem 0.3rem 0.2rem #e3e3e3;
+  border-radius: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+.mainTutoBoxItem__panel--icon {
+  color: #363636;
+  margin-right: 1.5rem;
+}
+@media screen and (max-width: 250px) {
+  .mainTutoBoxItem__panel--icon {
+    margin-right: 0.75rem;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .mainTutoBoxItem__panel--icon {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 250px) {
+  .mainTutoBoxItem__panel {
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .mainTutoBoxItem__panel {
+    display: flex;
+    align-items: center;
+    overflow-y: auto;
+    margin-left: 1rem;
+  }
+}
+.mainTutoBoxItem__number {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5f5f5;
+}
+
+.mainRestaurant {
+  width: 100%;
+  height: auto;
+  padding-top: 1rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+.mainRestaurant__title {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.mainRestaurant__card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainRestaurantCard {
+  width: 100%;
+  height: 15rem;
+  margin: 1rem 0 1.5rem 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0.5rem;
+  padding-left: 0%;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem #e3e3e3;
+  background-color: #fff;
+  display: flex;
+}
+@media screen and (max-width: 250px) {
+  .mainRestaurantCard {
+    height: 10rem;
+    overflow: auto;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .mainRestaurantCard {
+    height: 12rem;
+  }
+}
+@media (min-width: 330px) and (max-width: 390px) {
+  .mainRestaurantCard {
+    height: 14rem;
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .mainRestaurantCard {
+    padding-bottom: 0%;
+  }
+}
+.mainRestaurantCard__link {
+  text-decoration: none;
+  color: #363636;
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .mainRestaurantCard__link {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+.mainRestaurantCard__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0.5rem;
+  padding-left: 0%;
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+@media screen and (max-width: 250px) {
+  .mainRestaurantCard__header {
+    height: 60%;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .mainRestaurantCard__header {
+    height: 75%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .mainRestaurantCard__header {
+    width: 55%;
+    height: 100%;
+    padding-bottom: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
+}
+.mainRestaurantCard__header--pic {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+  width: 100%;
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .mainRestaurantCard__header--pic {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
+}
+.mainRestaurantCard__header--badge {
+  background-color: #99E2D0;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  right: 1.2rem;
+}
+.mainRestaurantCard__header--badgeHidden {
+  visibility: hidden;
+}
+.mainRestaurantCard__footer {
+  margin-left: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .mainRestaurantCard__footer {
+    width: 40%;
+    flex-direction: column;
+  }
+}
+.mainRestaurantCard__footer--like {
+  margin-right: 1rem;
+  margin-top: 0.3rem;
+  font-size: 1.4rem;
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .mainRestaurantCard__footer--like {
+    align-self: flex-end;
+    margin-bottom: 1rem;
+  }
+}
+.mainRestaurantCard__footer--title {
+  text-decoration: none;
+  margin-bottom: 0.2rem;
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .mainRestaurantCard__footer--title {
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .mainRestaurantCard__footer--subtitle {
+    margin-left: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

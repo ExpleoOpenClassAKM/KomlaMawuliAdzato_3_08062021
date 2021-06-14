@@ -1,0 +1,13 @@
+.Section {
+    display: flex;
+    flex-direction: column;
+    &__main {
+        max-width: 1450px;
+        margin: auto;
+    }
+    &__menu {
+        max-width: 1450px;
+        margin: auto;
+    }
+}
+

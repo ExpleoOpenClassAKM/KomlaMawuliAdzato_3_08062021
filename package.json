@@ -1,0 +1,19 @@
+{
+  "name": "projet3_ohmyfood_akm",
+  "version": "1.0.0",
+  "description": "Réalisation Projet P3 Ohmyfood! - Openclassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExpleoOpenClassAKM/KomlaMawuliAdzato_3_08062021.git"
+  },
+  "author": "Komla Mawuli ADZATO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ExpleoOpenClassAKM/KomlaMawuliAdzato_3_08062021/issues"
+  },
+  "homepage": "https://github.com/ExpleoOpenClassAKM/KomlaMawuliAdzato_3_08062021#readme"
+}

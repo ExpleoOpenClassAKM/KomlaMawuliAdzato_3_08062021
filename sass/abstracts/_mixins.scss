@@ -1,0 +1,80 @@
+// Ecrans
+@mixin media0-250 {
+    @media screen and (max-width: map-get($map: $breakpoints, $key: media250px)) {
+        @content;
+    }
+}
+
+@mixin media250-330 {
+    @media (min-width: map-get($map: $breakpoints, $key: media250px)) and (max-width: map-get($map: $breakpoints, $key: media330px)) {
+        @content;
+    }
+}
+
+@mixin media330-390 {
+    @media (min-width: map-get($map: $breakpoints, $key: media330px)) and (max-width: map-get($map: $breakpoints, $key: media390px)) {
+        @content;
+    }
+}
+ 
+@mixin media390-460 {
+    @media (min-width: map-get($map: $breakpoints, $key: media390px)) and (max-width: map-get($map: $breakpoints, $key: media460px)) {
+        @content;
+    }
+}
+
+@mixin media460-560 {
+    @media (min-width: map-get($map: $breakpoints, $key: media460px)) and (max-width: map-get($map: $breakpoints, $key: media560px)) {
+        @content;
+    }
+}
+
+@mixin media560-800 {
+    @media (min-width: map-get($map: $breakpoints, $key: media560px)) and (max-width: map-get($map: $breakpoints, $key: media800px)) {
+        @content;
+    }
+}
+
+@mixin media800-1000 {
+    @media (min-width: map-get($map: $breakpoints, $key: media800px)) and (max-width: map-get($map: $breakpoints, $key: media1000px)) {
+        @content;
+    }
+}
+
+@mixin media1000-1450 {
+    @media (min-width: map-get($map: $breakpoints, $key: media1000px)) and (max-width: map-get($map: $breakpoints, $key: media1450px)) {
+        @content;        
+    }
+}
+
+@mixin media1450-sup {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: media1450px)) {
+        @content;
+    }      
+}
+
+// paramètres des blocs
+@mixin common-bloc {
+    width: 100%;
+    height: auto;
+    padding-top: $dim;
+    padding-left: 1.2*$dim;
+    padding-right: 1.2*$dim;
+    padding-bottom: $dim;
+    display: flex;
+    flex-direction: column;
+}
+
+// Titres
+@mixin common-title {
+    padding-top: $dim;
+    padding-bottom: 0.5*$dim;
+}
+
+// Planches
+@mixin common-board {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
