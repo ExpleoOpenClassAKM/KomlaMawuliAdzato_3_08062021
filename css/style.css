@@ -500,6 +500,7 @@
 }
 .mainRestaurantCard__header--badge {
   background-color: #99E2D0;
+  color: #26915d;
   font-size: 1rem;
   margin-top: 1rem;
   padding: 0.3rem 0.6rem 0.3rem 0.6rem;
@@ -526,15 +527,21 @@
   }
 }
 .mainRestaurantCard__footer--like {
-  margin-right: 1rem;
+  margin-right: 2rem;
   margin-top: 0.3rem;
   font-size: 1.4rem;
+  position: relative;
 }
 @media (min-width: 800px) and (max-width: 1000px) {
   .mainRestaurantCard__footer--like {
     align-self: flex-end;
-    margin-bottom: 1rem;
+    margin-bottom: 1.75rem;
+    margin-right: 0.1rem;
   }
+}
+.mainRestaurantCard__footer--likeExtra {
+  position: absolute;
+  z-index: -1;
 }
 .mainRestaurantCard__footer--title {
   text-decoration: none;

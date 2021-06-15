@@ -257,6 +257,7 @@
         &--badge {
             background-color: $colour-tertiary;
             // Ajout couleur text (darken de tertiary)
+            color: $cd-FontBadge;
             font-size: $dim;
             margin-top: $dim;
             padding: 0.3*$dim 0.6*$dim 0.3*$dim 0.6*$dim;
@@ -282,13 +283,19 @@
             flex-direction: column;
         }
         &--like {
-            margin-right: 1*$dim;
+            margin-right: 2*$dim;
             margin-top: 0.3*$dim;
             font-size: 1.4*$dim;
+            position: relative;
             @include media800-1000 {
                 align-self: flex-end;
-                margin-bottom: $dim;
+                margin-bottom: 1.75*$dim;
+                margin-right: 0.1*$dim;
             }
+        }
+        &--likeExtra {
+            position: absolute;
+            z-index: -1;
         }
         &--title {
             text-decoration: none;
