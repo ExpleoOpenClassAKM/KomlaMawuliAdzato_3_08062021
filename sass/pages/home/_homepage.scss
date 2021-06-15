@@ -159,8 +159,18 @@
     &__title {
         @include common-title;
     }
-    &__card {
+    &__Card {
         @include common-board;
+        @include media1000-1450 {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        @include media1450-sup {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
     }
 }
 
@@ -188,6 +198,16 @@
     }
     @include media800-1000 {
         padding-bottom: 0%;
+    }
+    @include media1000-1450 {
+        width: 46.5%;
+        margin: $dim;
+        margin-bottom: $dim;
+    }
+    @include media1450-sup {
+        width: 47%;
+        margin: $dim;
+        margin-bottom: $dim;
     }
     &__link {
         text-decoration: none;

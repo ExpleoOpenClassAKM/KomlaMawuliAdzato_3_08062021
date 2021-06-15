@@ -11,10 +11,12 @@
     &__menu {
         padding-left: 2.5*$dim;
         padding-right: 2.5*$dim;
+        margin-top: 2*$dim;
+        margin-bottom: 2*$dim;
     }
-    &:hover {
-        box-shadow: $dim/4 $dim/4 $dim/4 $dim/4 $cd-footerbackground; // ajouter animation
-    }
+    //  &:hover {
+        // box-shadow: $dim/4 $dim/4 $dim/4 $dim/4 $cd-footerbackground; // ajouter animation gradiant
+    //  }
     @include media0-250 {
         font-size: 0.75*$dim;
         padding: 0.8*$dim;

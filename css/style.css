@@ -91,18 +91,21 @@
 .footerItems__list--link {
   color: #f5f5f5;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   display: block;
   line-height: normal;
-  margin: 0.8rem 0;
+  margin: 0.6rem 0;
+  width: 15rem;
 }
 @media screen and (max-width: 250px) {
   .footerItems__list--link {
     font-size: 1rem;
+    width: 10rem;
   }
 }
 .footerItems__list--link:hover {
   text-decoration: underline;
+  width: 15rem;
 }
 .footerItems__list--iconutensils {
   margin-right: 1.22rem;
@@ -111,12 +114,14 @@
 @media screen and (max-width: 250px) {
   .footerItems__list--iconutensils {
     font-size: 1rem;
+    width: auto;
   }
 }
 .footerItems__list--iconhands {
   margin-right: 1rem;
   font-size: 1rem;
 }
+
 .btn {
   width: auto;
   padding: 1rem;
@@ -131,9 +136,8 @@
 .btn__menu {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-}
-.btn:hover {
-  box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #363636;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 @media screen and (max-width: 250px) {
   .btn {
@@ -369,11 +373,25 @@
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
-.mainRestaurant__card {
+.mainRestaurant__Card {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .mainRestaurant__Card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .mainRestaurant__Card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 
 .mainRestaurantCard {
@@ -408,6 +426,20 @@
 @media (min-width: 800px) and (max-width: 1000px) {
   .mainRestaurantCard {
     padding-bottom: 0%;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .mainRestaurantCard {
+    width: 46.5%;
+    margin: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .mainRestaurantCard {
+    width: 47%;
+    margin: 1rem;
+    margin-bottom: 1rem;
   }
 }
 .mainRestaurantCard__link {
