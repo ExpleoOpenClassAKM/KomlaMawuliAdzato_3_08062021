@@ -21,7 +21,7 @@
 .menu {
     width: 100%;
     position: relative;
-    margin-top: -3.5*$dim;
+    margin-top: -3.75*$dim;
     border-top-left-radius: 2*$dim;
     border-top-right-radius: 2*$dim;
     &__table {
@@ -80,15 +80,54 @@
 }
 
 .menuItems {
-    width: auto;
+    width: 100%;
+    margin-bottom: -1.5*$dim;
+    @include media1000-1450 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    @include media1450-sup {
+        flex-direction: row;
+        justify-content: space-around;
+    }
     &__starter{
         @include menu-Items-basic-settings;
+        @include media1000-1450 {
+            display: flex;
+            flex-direction: column;
+            width: 31%
+        }
+        @include media1450-sup {
+            display: flex;
+            flex-direction: column;
+            width: 31%
+        }
     }
     &__dish {
         @include menu-Items-basic-settings;
+        @include media1000-1450 {
+            display: flex;
+            flex-direction: column;
+            width: 31%
+        }
+        @include media1450-sup {
+            display: flex;
+            flex-direction: column;
+            width: 30%
+        }
     }
     &__dessert {
         @include menu-Items-basic-settings;
+        @include media1000-1450 {
+            display: flex;
+            flex-direction: column;
+            width: 30%
+        }
+        @include media1450-sup {
+            display: flex;
+            flex-direction: column;
+            width: 30%
+        }
     }
 }
 
@@ -114,4 +153,10 @@
     &__panel {
         @include panel-designation-description-price-checked;
     }
+}
+
+.menuBtnField {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

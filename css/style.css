@@ -117,7 +117,7 @@
 }
 .footerItems__logo {
   font-family: "Shrikhand", cursive, sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
@@ -173,8 +173,7 @@
 .btn__menu {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 @media screen and (max-width: 250px) {
   .btn {
@@ -344,6 +343,7 @@
 }
 .mainTutoBoxItem__panel {
   position: relative;
+  cursor: pointer;
   margin-left: 1rem;
   box-shadow: 0.3rem 0.3rem 0.2rem #e3e3e3;
   border-radius: 1rem;
@@ -354,8 +354,9 @@
   background-color: #f5f5f5;
 }
 .mainTutoBoxItem__panel--icon {
-  color: #363636;
+  color: #6e6b6b;
   margin-right: 1.5rem;
+  font-size: 1.25rem;
 }
 @media screen and (max-width: 250px) {
   .mainTutoBoxItem__panel--icon {
@@ -540,7 +541,7 @@
   color: #26915d;
   font-size: 1rem;
   margin-top: 1rem;
-  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+  padding: 0.5rem 0.6rem;
   border-radius: 0.2rem;
   font-size: 0.9rem;
   font-weight: bold;

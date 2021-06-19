@@ -117,7 +117,7 @@
 }
 .footerItems__logo {
   font-family: "Shrikhand", cursive, sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #fff;
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
@@ -173,8 +173,7 @@
 .btn__menu {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 @media screen and (max-width: 250px) {
   .btn {
@@ -218,7 +217,7 @@
 .menu {
   width: 100%;
   position: relative;
-  margin-top: -3.5rem;
+  margin-top: -3.75rem;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
 }
@@ -290,7 +289,20 @@
 }
 
 .menuItems {
-  width: auto;
+  width: 100%;
+  margin-bottom: -1.5rem;
+}
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .menuItems {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .menuItems {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .menuItems__starter {
   margin-bottom: 1rem;
@@ -302,6 +314,20 @@
   padding-bottom: 0.15rem;
   border-bottom: 0.15rem solid #99E2D0;
 }
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .menuItems__starter {
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .menuItems__starter {
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+  }
+}
 .menuItems__dish {
   margin-bottom: 1rem;
 }
@@ -312,6 +338,20 @@
   padding-bottom: 0.15rem;
   border-bottom: 0.15rem solid #99E2D0;
 }
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .menuItems__dish {
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .menuItems__dish {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+}
 .menuItems__dessert {
   margin-bottom: 1rem;
 }
@@ -321,6 +361,20 @@
 .menuItems__dessert--TitleUnderline {
   padding-bottom: 0.15rem;
   border-bottom: 0.15rem solid #99E2D0;
+}
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .menuItems__dessert {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .menuItems__dessert {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
 }
 
 .menuStarterBox {
@@ -507,6 +561,12 @@
   align-items: center;
   color: #fff;
   margin-right: -5rem;
+}
+
+.menuBtnField {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style_menu.css.map */

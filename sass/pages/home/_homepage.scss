@@ -105,6 +105,7 @@
     }
     &__panel {
         position: relative;
+        cursor: pointer;
         margin-left: $dim;
         box-shadow: 0.3*$dim 0.3*$dim 0.2*$dim $cd-localbackground;
         border-radius: $dim;
@@ -114,8 +115,9 @@
         font-weight: bold;
         background-color: $cd-maincolour;
         &--icon {
-            color: $cd-footerbackground;
+            color: $cd-TutoIcon;
             margin-right: 1.5*$dim;
+            font-size: 1.25*$dim;
             @include media0-250 {
                 margin-right: 0.75*$dim;
             }
@@ -256,7 +258,7 @@
             color: $cd-FontBadge;
             font-size: $dim;
             margin-top: $dim;
-            padding: 0.3*$dim 0.6*$dim 0.3*$dim 0.6*$dim;
+            padding: 0.5*$dim 0.6*$dim;
             border-radius: 0.2*$dim;
             font-size: 0.9*$dim;
             font-weight: bold;
