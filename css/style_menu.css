@@ -1,0 +1,512 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(/polices/Roboto/Roboto-Black.ttf), url(/polices/Roboto/Roboto-Bold.ttf), url(/polices/Roboto/Roboto-Italic.ttf), url(/polices/Roboto/Roboto-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-family: "Shrikhand";
+  text-align: center;
+  background-color: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 0.5rem #363636;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+
+.headerItems {
+  width: 1450px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 1450px) {
+  .headerItems {
+    width: 100%;
+  }
+}
+.headerItems__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 250px) {
+  .headerItems__logo {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .headerItems__logo {
+    font-size: 1.75rem;
+  }
+}
+.headerItems__backbutton {
+  position: absolute;
+  padding-left: 1.5rem;
+  align-self: center;
+  cursor: pointer;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 250px) {
+  .headerItems__backbutton {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .headerItems__backbutton {
+    justify-self: left;
+  }
+}
+
+.Section {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.Section__main {
+  max-width: 1450px;
+  margin: auto;
+}
+.Section__menu {
+  max-width: 1450px;
+  margin: auto;
+  background-color: #f5f5f5;
+}
+
+.footer {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  background-color: #363636;
+  display: flex;
+}
+
+.footerItems {
+  width: 1450px;
+  height: auto;
+  margin: auto;
+  padding-left: 1.5rem;
+  padding-bottom: 2rem;
+}
+@media screen and (max-width: 250px) {
+  .footerItems {
+    margin: auto;
+  }
+}
+.footerItems__logo {
+  font-family: "Shrikhand", cursive, sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+.footerItems__list {
+  list-style-type: none;
+}
+.footerItems__list--link {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 1.25rem;
+  display: block;
+  line-height: normal;
+  margin: 0.6rem 0;
+  width: 15rem;
+}
+@media screen and (max-width: 250px) {
+  .footerItems__list--link {
+    font-size: 1rem;
+    width: 10rem;
+  }
+}
+.footerItems__list--link:hover {
+  text-decoration: underline;
+  width: 15rem;
+}
+.footerItems__list--iconutensils {
+  margin-right: 1.22rem;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 250px) {
+  .footerItems__list--iconutensils {
+    font-size: 1rem;
+    width: auto;
+  }
+}
+.footerItems__list--iconhands {
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.btn {
+  width: auto;
+  padding: 1rem;
+  border-radius: 2.5rem;
+  color: #f5f5f5;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #FF79DA;
+  border: 0.1rem solid #FF79DA;
+}
+.btn__menu {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 250px) {
+  .btn {
+    font-size: 0.75rem;
+    padding: 0.8rem;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .btn {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+.menu__picture {
+  max-width: 100%;
+  max-height: 30rem;
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .menu__picture {
+    height: 30rem;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1450px) {
+  .menu__picture {
+    height: 30rem;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .menu__picture {
+    height: 30rem;
+  }
+}
+.menu__picture--img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.menu {
+  width: 100%;
+  position: relative;
+  margin-top: -3.5rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.menu__table {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.menu__table--name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.menu__table--items {
+  width: 100%;
+  height: auto;
+  padding-top: 1rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuTableName__title {
+  font-family: "Shrikhand", cursive, sans-serif;
+  font-weight: 100;
+  font-size: 1.75rem;
+}
+@media screen and (max-width: 250px) {
+  .menuTableName__title {
+    font-weight: normal;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .menuTableName__title {
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-right: 0.25rem;
+  }
+}
+.menuTableName__like {
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+.menuTableName__like--Default {
+  position: relative;
+}
+.menuTableName__like--Extra {
+  position: absolute;
+  z-index: -1;
+}
+@media screen and (max-width: 250px) {
+  .menuTableName__like {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .menuTableName__like {
+    font-size: 1.6rem;
+    margin-right: 1.25rem;
+  }
+}
+
+.menuItems {
+  width: auto;
+}
+.menuItems__starter {
+  margin-bottom: 1rem;
+}
+.menuItems__starter--Title {
+  margin-bottom: 0.75rem;
+}
+.menuItems__starter--TitleUnderline {
+  padding-bottom: 0.15rem;
+  border-bottom: 0.15rem solid #99E2D0;
+}
+.menuItems__dish {
+  margin-bottom: 1rem;
+}
+.menuItems__dish--Title {
+  margin-bottom: 0.75rem;
+}
+.menuItems__dish--TitleUnderline {
+  padding-bottom: 0.15rem;
+  border-bottom: 0.15rem solid #99E2D0;
+}
+.menuItems__dessert {
+  margin-bottom: 1rem;
+}
+.menuItems__dessert--Title {
+  margin-bottom: 0.75rem;
+}
+.menuItems__dessert--TitleUnderline {
+  padding-bottom: 0.15rem;
+  border-bottom: 0.15rem solid #99E2D0;
+}
+
+.menuStarterBox {
+  width: auto;
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menuStarterBox__panel {
+  height: 5rem;
+  box-shadow: 0 0 0.75rem #cecbcb;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0.75rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.menuStarterBox__panel--textBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  white-space: nowrap;
+}
+.menuStarterBox__panel--textNameBox {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: normal;
+  width: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+}
+.menuStarterBox__panel--textNameDesignation {
+  margin-bottom: 0.25rem;
+}
+.menuStarterBox__panel--textPrice {
+  width: auto;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  margin-right: 1.25rem;
+  margin-left: 0.4rem;
+  font-weight: 700;
+}
+.menuStarterBox__panel--checkedBox {
+  background-color: #99E2D0;
+  width: 5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-right: -5rem;
+}
+
+.menuDishBox {
+  width: auto;
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menuDishBox__panel {
+  height: 5rem;
+  box-shadow: 0 0 0.75rem #cecbcb;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0.75rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.menuDishBox__panel--textBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  white-space: nowrap;
+}
+.menuDishBox__panel--textNameBox {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: normal;
+  width: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+}
+.menuDishBox__panel--textNameDesignation {
+  margin-bottom: 0.25rem;
+}
+.menuDishBox__panel--textPrice {
+  width: auto;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  margin-right: 1.25rem;
+  margin-left: 0.4rem;
+  font-weight: 700;
+}
+.menuDishBox__panel--checkedBox {
+  background-color: #99E2D0;
+  width: 5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-right: -5rem;
+}
+
+.menuDessertBox {
+  width: auto;
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menuDessertBox__panel {
+  height: 5rem;
+  box-shadow: 0 0 0.75rem #cecbcb;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0.75rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.menuDessertBox__panel--textBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  white-space: nowrap;
+}
+.menuDessertBox__panel--textNameBox {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: normal;
+  width: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+}
+.menuDessertBox__panel--textNameDesignation {
+  margin-bottom: 0.25rem;
+}
+.menuDessertBox__panel--textPrice {
+  width: auto;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  margin-right: 1.25rem;
+  margin-left: 0.4rem;
+  font-weight: 700;
+}
+.menuDessertBox__panel--checkedBox {
+  background-color: #99E2D0;
+  width: 5rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-right: -5rem;
+}
+
+/*# sourceMappingURL=style_menu.css.map */

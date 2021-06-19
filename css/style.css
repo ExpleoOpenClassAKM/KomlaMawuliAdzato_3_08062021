@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(/polices/Roboto/Roboto-Black.ttf), url(/polices/Roboto/Roboto-Bold.ttf), url(/polices/Roboto/Roboto-Italic.ttf), url(/polices/Roboto/Roboto-Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +10,14 @@
 
 .container {
   margin: auto;
-  padding: auto;
-  height: auto;
+  padding: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .header {
+  font-family: "Shrikhand";
   text-align: center;
   background-color: #fff;
   padding-top: 1rem;
@@ -32,11 +37,26 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+@media screen and (min-width: 1450px) {
+  .headerItems {
+    width: 100%;
+  }
+}
 .headerItems__logo {
   font-size: 2rem;
   font-weight: bold;
   width: 100%;
   position: relative;
+}
+@media screen and (max-width: 250px) {
+  .headerItems__logo {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .headerItems__logo {
+    font-size: 1.75rem;
+  }
 }
 .headerItems__backbutton {
   position: absolute;
@@ -44,9 +64,22 @@
   align-self: center;
   cursor: pointer;
   z-index: 1;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 250px) {
+  .headerItems__backbutton {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1450px) {
+  .headerItems__backbutton {
+    justify-self: left;
+  }
 }
 
 .Section {
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
 }
@@ -57,12 +90,14 @@
 .Section__menu {
   max-width: 1450px;
   margin: auto;
+  background-color: #f5f5f5;
 }
 
 .footer {
-  margin: auto;
-  padding: auto;
-  width: 100%;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: auto;
   height: auto;
   background-color: #363636;
   display: flex;
@@ -70,6 +105,7 @@
 
 .footerItems {
   width: 1450px;
+  height: auto;
   margin: auto;
   padding-left: 1.5rem;
   padding-bottom: 2rem;
@@ -80,6 +116,7 @@
   }
 }
 .footerItems__logo {
+  font-family: "Shrikhand", cursive, sans-serif;
   font-size: 2rem;
   color: #fff;
   margin-bottom: 1.5rem;
@@ -289,11 +326,11 @@
 
 .mainTutoBoxItem {
   width: auto;
-  height: 4rem;
   margin: 1rem 0 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 4rem;
 }
 @media (min-width: 1000px) and (max-width: 1450px) {
   .mainTutoBoxItem {
@@ -308,7 +345,6 @@
 .mainTutoBoxItem__panel {
   position: relative;
   margin-left: 1rem;
-  border: 0.2rem solid #f5f5f5;
   box-shadow: 0.3rem 0.3rem 0.2rem #e3e3e3;
   border-radius: 1rem;
   padding-top: 1.5rem;
@@ -395,6 +431,7 @@
 }
 
 .mainRestaurantCard {
+  position: relative;
   width: 100%;
   height: 15rem;
   margin: 1rem 0 1.5rem 0;
@@ -469,12 +506,12 @@
 }
 @media screen and (max-width: 250px) {
   .mainRestaurantCard__header {
-    height: 60%;
+    height: 65%;
   }
 }
 @media (min-width: 250px) and (max-width: 330px) {
   .mainRestaurantCard__header {
-    height: 75%;
+    height: 70%;
   }
 }
 @media (min-width: 800px) and (max-width: 1000px) {
@@ -516,32 +553,11 @@
 }
 .mainRestaurantCard__footer {
   margin-left: 0.7rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 @media (min-width: 800px) and (max-width: 1000px) {
   .mainRestaurantCard__footer {
     width: 40%;
-    flex-direction: column;
   }
-}
-.mainRestaurantCard__footer--like {
-  margin-right: 2rem;
-  margin-top: 0.3rem;
-  font-size: 1.4rem;
-  position: relative;
-}
-@media (min-width: 800px) and (max-width: 1000px) {
-  .mainRestaurantCard__footer--like {
-    align-self: flex-end;
-    margin-bottom: 1.75rem;
-    margin-right: 0.1rem;
-  }
-}
-.mainRestaurantCard__footer--likeExtra {
-  position: absolute;
-  z-index: -1;
 }
 .mainRestaurantCard__footer--title {
   text-decoration: none;
@@ -557,6 +573,42 @@
 @media (min-width: 800px) and (max-width: 1000px) {
   .mainRestaurantCard__footer--subtitle {
     margin-left: 2rem;
+  }
+}
+.mainRestaurantCard__like {
+  margin-right: 1.5rem;
+  margin-top: 0.3rem;
+  font-size: 1.75rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.mainRestaurantCard__like:hover {
+  cursor: pointer;
+}
+.mainRestaurantCard__like--Default {
+  position: relative;
+}
+.mainRestaurantCard__like--Extra {
+  position: absolute;
+  z-index: -1;
+}
+@media screen and (max-width: 250px) {
+  .mainRestaurantCard__like {
+    right: 0.1rem;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 250px) and (max-width: 330px) {
+  .mainRestaurantCard__like {
+    right: 0.25rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .mainRestaurantCard__like {
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
   }
 }
 

@@ -1,0 +1,117 @@
+.menu__picture {
+    max-width: 100%;
+    max-height: 30*$dim;
+    @include media800-1000 {
+        height: 30*$dim;
+    }
+    @include media1000-1450 {
+        height: 30*$dim;
+    }
+    @include media1450-sup {
+        height: 30*$dim;
+    }
+    &--img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+}
+
+.menu {
+    width: 100%;
+    position: relative;
+    margin-top: -3.5*$dim;
+    border-top-left-radius: 2*$dim;
+    border-top-right-radius: 2*$dim;
+    &__table {
+        padding-top: 2*$dim;
+        display: flex;
+        flex-direction: column;
+        &--name {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: $dim;
+            margin-right: 1.5*$dim;
+            margin-bottom: 0.5*$dim;
+        }
+        &--items {
+            @include common-bloc;
+        }
+    }
+}
+
+.menuTableName {
+    &__title {
+        font-family: 'Shrikhand', cursive, sans-serif;
+        font-weight: 100;
+        font-size: 1.75*$dim;
+        @include media0-250 {
+            font-weight: normal;
+            font-size: 1.25*$dim;
+        }
+        @include media250-330 {
+            font-weight: normal;
+            font-size: 1.5*$dim;
+            margin-right: 0.25*$dim;
+        }
+    }
+    &__like {
+        margin-top: 0.5*$dim;
+        margin-right: $dim;
+        font-size: 1.75*$dim;
+        cursor: pointer;
+        &--Default {
+            position: relative;
+        }
+        &--Extra {
+            position: absolute;
+            z-index: -1;
+        }
+        @include media0-250 {
+            font-size: 1.5*$dim;
+        }
+        @include media250-330 {
+            font-size: 1.6*$dim;
+            margin-right: 1.25*$dim;
+        }
+    }
+}
+
+.menuItems {
+    width: auto;
+    &__starter{
+        @include menu-Items-basic-settings;
+    }
+    &__dish {
+        @include menu-Items-basic-settings;
+    }
+    &__dessert {
+        @include menu-Items-basic-settings;
+    }
+}
+
+// Entrées
+.menuStarterBox {
+    @include Tuto-Menu-ItemsBox;
+    &__panel {
+        @include panel-designation-description-price-checked;
+    }
+}
+
+// Plats
+.menuDishBox {
+    @include Tuto-Menu-ItemsBox;
+    &__panel {
+       @include panel-designation-description-price-checked;
+    }
+}
+
+// Desserts
+.menuDessertBox {
+    @include Tuto-Menu-ItemsBox;
+    &__panel {
+        @include panel-designation-description-price-checked;
+    }
+}

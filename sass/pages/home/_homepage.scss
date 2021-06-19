@@ -95,12 +95,8 @@
 }
 
 .mainTutoBoxItem {
-    width: auto;
+    @include Tuto-Menu-ItemsBox;
     height: 4*$dim;
-    margin: $dim 0 $dim 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     @include media1000-1450 {
         width: 30%;
     }
@@ -110,7 +106,6 @@
     &__panel {
         position: relative;
         margin-left: $dim;
-        border: 0.2*$dim solid $cd-maincolour;
         box-shadow: 0.3*$dim 0.3*$dim 0.2*$dim $cd-localbackground;
         border-radius: $dim;
         padding-top: 1.5*$dim;
@@ -175,6 +170,7 @@
 }
 
 .mainRestaurantCard {
+    position: relative;
     width: 100%;
     height: 15*$dim;
     margin: $dim 0 1.5*$dim 0;
@@ -232,10 +228,10 @@
         height: 80%;
         position: relative;
         @include media0-250 {
-            height: 60%;
+            height: 65%;
         }
         @include media250-330 {
-            height: 75%;
+            height: 70%;
         }
         @include media800-1000 {
             width: 55%;
@@ -275,27 +271,8 @@
     &__footer
     {
         margin-left: 0.7*$dim;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         @include media800-1000 {
             width: 40%;
-            flex-direction: column;
-        }
-        &--like {
-            margin-right: 2*$dim;
-            margin-top: 0.3*$dim;
-            font-size: 1.4*$dim;
-            position: relative;
-            @include media800-1000 {
-                align-self: flex-end;
-                margin-bottom: 1.75*$dim;
-                margin-right: 0.1*$dim;
-            }
-        }
-        &--likeExtra {
-            position: absolute;
-            z-index: -1;
         }
         &--title {
             text-decoration: none;
@@ -310,6 +287,36 @@
             @include media800-1000 {
                 margin-left: 2*$dim;
             }
+        }
+    }
+    &__like {
+        margin-right: 1.5*$dim;
+        margin-top: 0.3*$dim;
+        font-size: 1.75*$dim;
+        position: absolute;
+        bottom: $dim;
+        right: $dim;
+        &:hover {
+            cursor: pointer;
+        }
+        &--Default {
+            position: relative;
+        }
+        &--Extra {
+            position: absolute;
+            z-index: -1;
+        }
+        @include media0-250 {
+            right: 0.1*$dim;
+            font-size: 1.25*$dim;
+        }
+        @include media250-330 {
+            right: 0.25*$dim;
+            font-size: 1.5*$dim;
+        }
+        @include media800-1000 { 
+            margin-bottom: $dim;
+            margin-right: 1.5*$dim;
         }
     }  
 }

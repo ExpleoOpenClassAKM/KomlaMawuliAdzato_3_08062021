@@ -1,4 +1,5 @@
 .Section {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     &__main {
@@ -8,6 +9,7 @@
     &__menu {
         max-width: 1450px;
         margin: auto;
+        background-color: $cd-maincolour;
     }
 }
 

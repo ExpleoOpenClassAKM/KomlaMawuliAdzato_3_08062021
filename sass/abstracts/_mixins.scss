@@ -78,3 +78,81 @@
     display: flex;
     flex-direction: column;
 }
+
+// Box composantes "tuto" et "menu"
+@mixin Tuto-Menu-ItemsBox {
+    width: auto;
+    margin: $dim 0 $dim 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+// Paramètres de mise en page de base des Items du menu "Entrées / Palts / Desserts"
+@mixin menu-Items-basic-settings {
+    margin-bottom: $dim;
+    &--Title {
+        margin-bottom: 0.75*$dim;
+    }
+    &--TitleUnderline {
+        padding-bottom: 0.15*$dim;
+        border-bottom: 0.15*$dim solid $colour-tertiary;
+    } 
+}
+
+// Paramètres des Panels du menu
+@mixin panel-designation-description-price-checked {
+    height: 5*$dim;
+    box-shadow: 0 0 0.75*$dim $cd-shadow;
+    border-radius: $dim;
+    margin-bottom: $dim;
+    padding-left: 0.75*$dim;
+    background-color: $cd-accent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden; // cache la partie valisation du panel jusqu'au ":hover"
+    &--textBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        white-space: nowrap;
+    }
+    &--textNameBox { 
+        padding-top: 0.85*$dim;
+        padding-bottom: 0.85*$dim;
+        font-size: 0.95*$dim;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        line-height: normal;
+        width: 100%;
+        overflow: auto;
+        overflow-y: hidden;
+    }
+    &--textNameDesignation {
+        margin-bottom: 0.25*$dim;
+    }
+    &--textPrice {
+        width: auto;
+        align-self: flex-end;
+        margin-bottom: $dim;
+        margin-right: 1.25*$dim;
+        margin-left: 0.4*$dim;
+        font-weight: 700;
+    }
+    &--checkedBox {
+        background-color: $colour-tertiary;
+        width: 5*$dim;
+        border-top-right-radius: $dim;
+        border-bottom-right-radius: $dim;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $cd-accent;
+        margin-right: -5rem; // sort la boîte de la zone d'affichage par défaut
+    }   
+}
+

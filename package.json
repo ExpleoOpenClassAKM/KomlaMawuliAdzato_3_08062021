@@ -4,7 +4,7 @@
   "description": "Réalisation Projet P3 Ohmyfood! - Openclassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:css/style.css"
+    "sass": "sass --watch ./sass/main.scss:css/style.css ./sass/menu.scss:css/style_menu.css"
   },
   "repository": {
     "type": "git",
