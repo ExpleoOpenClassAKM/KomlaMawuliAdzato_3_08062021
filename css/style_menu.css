@@ -167,8 +167,10 @@
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  background-color: #FF79DA;
-  border: 0.1rem solid #FF79DA;
+  background-color: #e3e3e3;
+  background-image: linear-gradient(0deg, #9356dc, #ff79da);
+  border: 0.1rem solid #e3e3e3;
+  box-shadow: 0.3rem 0.3rem 5rem #e3e3e3;
 }
 .btn__menu {
   padding-left: 2.5rem;
@@ -253,19 +255,18 @@
 @media screen and (max-width: 250px) {
   .menuTableName__title {
     font-weight: normal;
-    font-size: 1.25rem;
   }
 }
 @media (min-width: 250px) and (max-width: 330px) {
   .menuTableName__title {
     font-weight: normal;
-    font-size: 1.5rem;
     margin-right: 0.25rem;
   }
 }
 .menuTableName__like {
   margin-top: 0.5rem;
   margin-right: 1rem;
+  margin-left: 0.75rem;
   font-size: 1.75rem;
   cursor: pointer;
 }
@@ -412,18 +413,23 @@
   justify-content: space-around;
   line-height: normal;
   width: 100%;
-  overflow: auto;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .menuStarterBox__panel--textNameDesignation {
   margin-bottom: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menuStarterBox__panel--textNameDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menuStarterBox__panel--textPrice {
   width: auto;
   align-self: flex-end;
   margin-bottom: 1rem;
   margin-right: 1.25rem;
-  margin-left: 0.4rem;
+  margin-left: 0.75rem;
   font-weight: 700;
 }
 .menuStarterBox__panel--checkedBox {
@@ -474,18 +480,23 @@
   justify-content: space-around;
   line-height: normal;
   width: 100%;
-  overflow: auto;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .menuDishBox__panel--textNameDesignation {
   margin-bottom: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menuDishBox__panel--textNameDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menuDishBox__panel--textPrice {
   width: auto;
   align-self: flex-end;
   margin-bottom: 1rem;
   margin-right: 1.25rem;
-  margin-left: 0.4rem;
+  margin-left: 0.75rem;
   font-weight: 700;
 }
 .menuDishBox__panel--checkedBox {
@@ -536,18 +547,23 @@
   justify-content: space-around;
   line-height: normal;
   width: 100%;
-  overflow: auto;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .menuDessertBox__panel--textNameDesignation {
   margin-bottom: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menuDessertBox__panel--textNameDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menuDessertBox__panel--textPrice {
   width: auto;
   align-self: flex-end;
   margin-bottom: 1rem;
   margin-right: 1.25rem;
-  margin-left: 0.4rem;
+  margin-left: 0.75rem;
   font-weight: 700;
 }
 .menuDessertBox__panel--checkedBox {

@@ -49,17 +49,16 @@
         font-size: 1.75*$dim;
         @include media0-250 {
             font-weight: normal;
-            font-size: 1.25*$dim;
         }
         @include media250-330 {
             font-weight: normal;
-            font-size: 1.5*$dim;
             margin-right: 0.25*$dim;
         }
     }
     &__like {
         margin-top: 0.5*$dim;
         margin-right: $dim;
+        margin-left: 0.75*$dim;
         font-size: 1.75*$dim;
         cursor: pointer;
         &--Default {

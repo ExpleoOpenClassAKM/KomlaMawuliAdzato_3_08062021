@@ -6,8 +6,14 @@
     font-size: $dim;
     font-weight: bold;
     cursor: pointer;
-    background-color: $colour-secondary; // A faire: ajout du dégradé en animatin
-    border: 0.1*$dim solid $colour-secondary;
+    background-color: $cd-localbackground;
+    background-image: linear-gradient(
+    0deg,
+    rgb(147, 86, 220, 1),
+    rgb(255, 121, 218, 1)
+    );
+    border: 0.1*$dim solid $cd-localbackground;
+    box-shadow: 0.3*$dim 0.3*$dim 5*$dim $cd-localbackground;
     &__menu {
         padding-left: 2.5*$dim;
         padding-right: 2.5*$dim;

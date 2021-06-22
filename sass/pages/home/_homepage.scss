@@ -98,7 +98,7 @@
     @include Tuto-Menu-ItemsBox;
     height: 4*$dim;
     @include media1000-1450 {
-        width: 30%;
+        width: 31%;
     }
     @include media1450-sup {
         width: 30%;
@@ -111,19 +111,33 @@
         border-radius: $dim;
         padding-top: 1.5*$dim;
         padding-bottom: 1.5*$dim;
-        padding-left: 2*$dim;
+        padding-left: 2.75*$dim;
         font-weight: bold;
         background-color: $cd-maincolour;
-        &--icon {
-            color: $cd-TutoIcon;
-            margin-right: 1.5*$dim;
-            font-size: 1.25*$dim;
-            @include media0-250 {
-                margin-right: 0.75*$dim;
+        z-index: 1;
+        // Couleur panel au hover
+        &:hover {
+            &::after {
+                opacity: 1;
             }
-            @include media250-330 {
-                margin-right: $dim;
-            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: $dim;
+            background-color: lighten($color: $colour-primary, $amount: 35);
+            opacity: 0;
+            z-index: -1;
+            transition: 200ms;
+        }
+        // changement de couleur icon au hover
+        &:hover + .mainTutoBoxItem__icon {
+            color: $colour-primary;
+            z-index: 1;
         }
         @include media0-250 {
             overflow-y: auto;
@@ -136,6 +150,30 @@
             overflow-y: auto;
             margin-left: $dim;
         }
+        @include media330-390 {
+            display: flex;
+            align-items: center;
+            overflow-y: auto;
+            margin-left: $dim;
+        }
+        &--title {
+            margin-left: 1.5*$dim;
+            margin-right: 0.5*$dim;
+        }
+    }
+    &__icon {
+        position: absolute;
+        color: $cd-TutoIcon;
+        margin-left: 3*$dim;
+        font-size: 1.25*$dim;
+        z-index: 1;
+        
+        @include media0-250 {
+            margin-right: 0.75*$dim;
+        }
+        @include media250-330 {
+            margin-right: $dim;
+        }
     }
     &__number {
         position: absolute;
@@ -147,6 +185,7 @@
         justify-content: center;
         align-items: center;
         color: $cd-maincolour;
+        z-index: 1;
     }
 }
 

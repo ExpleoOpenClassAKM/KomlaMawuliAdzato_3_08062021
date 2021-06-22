@@ -111,7 +111,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow: hidden; // cache la partie valisation du panel jusqu'au ":hover"
+    overflow: hidden; // cache la partie validation du panel jusqu'au ":hover"
     &--textBox {
         display: flex;
         flex-direction: row;
@@ -128,18 +128,23 @@
         justify-content: space-around;
         line-height: normal;
         width: 100%;
-        overflow: auto;
-        overflow-y: hidden;
+        overflow: hidden; 
     }
     &--textNameDesignation {
         margin-bottom: 0.25*$dim;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &--textNameDescription {
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     &--textPrice {
         width: auto;
         align-self: flex-end;
         margin-bottom: $dim;
         margin-right: 1.25*$dim;
-        margin-left: 0.4*$dim;
+        margin-left: 0.75*$dim;
         font-weight: 700;
     }
     &--checkedBox {
