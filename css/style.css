@@ -1,30 +1,30 @@
 @keyframes heart-filling {
   0% {
-    background-image: linear-gradient(90deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    opacity: 0;
+    background-image: linear-gradient(180deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    opacity: 0.25;
     -webkit-background-clip: text;
     -moz-background-clip: text;
   }
   45% {
-    background-image: linear-gradient(90deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    opacity: 0.2;
+    background-image: linear-gradient(180deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    opacity: 0.35;
     -webkit-background-clip: text;
     -moz-background-clip: text;
   }
   70% {
-    background-image: linear-gradient(90deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    opacity: 0.45;
+    background-image: linear-gradient(180deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    opacity: 0.65;
     -webkit-background-clip: text;
     -moz-background-clip: text;
   }
   85% {
-    background-image: linear-gradient(90deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    opacity: 0.85;
+    background-image: linear-gradient(180deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    opacity: 0.9;
     -webkit-background-clip: text;
     -moz-background-clip: text;
   }
   100% {
-    background-image: linear-gradient(90deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    background-image: linear-gradient(180deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
     opacity: 1;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -44,34 +44,27 @@
     opacity: 1;
   }
 }
-@keyframes ohmyfoodLoading {
-  0%, 50%, 100% {
-    transform: scaleY(0.1);
+@keyframes loadingSpiner {
+  to {
+    transform: rotate(3turn);
   }
-  35% {
-    transform: scaleY(1);
+  to {
+    opacity: 0;
+  }
+}
+@keyframes load-msg {
+  0% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
   }
 }
 @keyframes containerLoading {
-  0% {
+  from {
     opacity: 0;
   }
-  15% {
-    opacity: 0.1;
-  }
-  40% {
-    opacity: 0.3;
-  }
-  65% {
-    opacity: 0.5;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  90%, 100% {
+  to {
     opacity: 1;
   }
 }
@@ -81,6 +74,17 @@
   }
   100% {
     transform: scale(1.02);
+  }
+}
+@keyframes btn-hov {
+  0% {
+    background-image: linear-gradient(0deg, #9356dc, #ff79da);
+  }
+  60% {
+    background-image: lighten 0deg, #9356dc, #ff79da, 5%;
+  }
+  100% {
+    background-image: lighten 0deg, #9356dc, #ff79da, 10%;
   }
 }
 @font-face {
@@ -96,18 +100,15 @@
 }
 
 .container {
+  position: relative;
   margin: auto;
   padding: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 .container__homepage {
-  animation: containerLoading 1125ms 1125ms ease-in-out both;
+  animation: containerLoading 3000ms 1250ms ease-in-out both;
 }
 
 .header {
@@ -357,66 +358,41 @@
   }
 }
 
-.ohmyfoodLoader {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10rem;
+.loaderSpiner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
-}
-
-.ohmyfoodLoader span {
-  width: 2rem;
-  height: 6rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.loaderSpiner::after {
+  position: relative;
+  content: "";
+  width: 12.5rem;
+  height: 12.5rem;
+  border: 2rem solid #99E2D0;
+  border-top-color: #9356DC;
+  border-bottom-color: #FF79DA;
   background-color: #fff;
-  margin: 0 0.25rem;
-  animation: ohmyfoodLoading 1125ms ease-in-out forwards;
-  animation-iteration-count: 2;
+  border-radius: 50%;
+  animation: loadingSpiner 3000ms ease-in forwards;
 }
-
-.ohmyfoodLoader span:nth-child(1) {
-  background-color: #9356DC;
-  animation-delay: -1000ms;
+.loaderSpiner__child {
+  position: absolute;
+  z-index: 1;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-image: linear-gradient(180deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  animation: loadingSpiner 3000ms linear forwards;
 }
-
-.ohmyfoodLoader span:nth-child(2) {
-  background-color: #FF79DA;
-  animation-delay: -875ms;
-}
-
-.ohmyfoodLoader span:nth-child(3) {
-  background-color: #99E2D0;
-  animation-delay: -750ms;
-}
-
-.ohmyfoodLoader span:nth-child(4) {
-  background-image: linear-gradient(90deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  animation-delay: -625ms;
-}
-
-.ohmyfoodLoader span:nth-child(5) {
-  background-color: #99E2D0;
-  animation-delay: -500ms;
-}
-
-.ohmyfoodLoader span:nth-child(6) {
-  background-color: #FF79DA;
-  animation-delay: -375ms;
-}
-
-.ohmyfoodLoader span:nth-child(7) {
-  background-color: #9356DC;
-  animation-delay: -250ms;
-}
-
-.ohmyfoodLoader span:nth-child(8) {
-  background-image: linear-gradient(90deg, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  animation-delay: -125ms;
+.loaderSpiner__msg {
+  position: absolute;
+  align-self: center;
+  z-index: 1;
+  animation: load-msg 3000ms forwards;
 }
 
 .mainLocation {
@@ -849,11 +825,15 @@
 .mainRestaurantCard__like {
   margin-right: 1.5rem;
   margin-top: 0.3rem;
+  padding-right: 0.2rem;
   font-size: 2rem;
   position: absolute;
   bottom: 1rem;
   right: 1rem;
   cursor: pointer;
+}
+.mainRestaurantCard__like:hover {
+  color: #fff;
 }
 .mainRestaurantCard__like--Default {
   position: relative;
@@ -864,6 +844,10 @@
 .mainRestaurantCard__like--Extra {
   position: absolute;
   color: transparent;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .mainRestaurantCard__like--Extra:hover {
   cursor: pointer;

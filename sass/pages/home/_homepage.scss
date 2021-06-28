@@ -1,67 +1,41 @@
 //=================================================================================================
 //========================================ohmyfoodLoader===========================================
 //=================================================================================================
-
-.ohmyfoodLoader {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10*$dim;
+.loaderSpiner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
-}
-
-.ohmyfoodLoader span {
-    width: 2*$dim;
-    height: 6*$dim;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: $cd-accent;
-    margin: 0 0.25*$dim;
-    animation: ohmyfoodLoading 900ms*$load-coef ease-in-out forwards;
-    animation-iteration-count: 2;
-}
-
-.ohmyfoodLoader span:nth-child(1) {
-    background-color: $colour-primary;
-    animation-delay: -800ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(2) {
-    background-color: $colour-secondary;
-    animation-delay: -700ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(3) {
-    background-color: $colour-tertiary;
-    animation-delay: -600ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(4) {
-    background-image: $cd-linear-gradient;
-    animation-delay: -500ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(5) {
-    background-color: $colour-tertiary;
-    animation-delay: -400ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(6) {
-    background-color: $colour-secondary;
-    animation-delay: -300ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(7) {
-    background-color: $colour-primary;
-    animation-delay: -200ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(8) {
-    background-image: $cd-linear-gradient;
-    animation-delay: -100ms*$load-coef;
+    align-items: center;
+    position: fixed;
+    &::after {
+        position: relative;
+        content: "";
+        width: 12.5*$dim;
+        height: 12.5*$dim;
+        border: 2*$dim solid $colour-tertiary;
+        border-top-color: $colour-primary;
+        border-bottom-color: $colour-secondary;
+        background-color: $cd-accent;
+        border-radius: 50%;
+        animation: loadingSpiner 3000ms ease-in forwards;  
+    }
+    &__child {
+        position: absolute;
+        z-index: 1;
+        width: 5*$dim;
+        height: 5*$dim;
+        border-radius: 50%;
+        background-image: $cd-linear-gradient;
+        animation: loadingSpiner 3000ms linear forwards;
+    }
+    &__msg {
+        position: absolute;
+        align-self: center;
+        z-index: 1;
+        animation: load-msg 3000ms forwards;
+    }
 }
 
 //main
@@ -403,11 +377,15 @@
     &__like {
         margin-right: 1.5*$dim;
         margin-top: 0.3*$dim;
+        padding-right: 0.2*$dim;
         font-size: 2*$dim;
         position: absolute;
         bottom: $dim;
         right: $dim;
         cursor: pointer;
+        &:hover {
+            color: $cd-accent;
+        }
         &--Default {
             position: relative;
             &:hover {
@@ -417,6 +395,10 @@
         &--Extra {
             position: absolute;
             color: transparent;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             &:hover {
                 cursor: pointer;
                 animation: heart-filling 450ms both ease-in-out;               
@@ -427,7 +409,6 @@
                 z-index: 1;
             }
         }
-        
         @include media0-250 {
             right: 0.1*$dim;
             font-size: 1.25*$dim;

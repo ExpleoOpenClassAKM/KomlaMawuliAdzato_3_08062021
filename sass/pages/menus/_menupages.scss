@@ -59,8 +59,12 @@
         margin-top: 0.5*$dim;
         margin-right: $dim;
         margin-left: 0.75*$dim;
+        padding-right: 0.2*$dim;
         font-size: 2*$dim;
         cursor: pointer;
+        &:hover {
+            color: $cd-maincolour;
+        }
         &--Default {
             position: relative;
             &:hover {
@@ -72,7 +76,7 @@
             color: transparent;
             &:hover {
                 cursor: pointer;
-                animation: heart-filling 450ms forwards ease-in-out;              
+                animation: heart-filling 450ms both ease-in-out;               
                 color: transparent;
                 display: inline-block;
                 opacity: 0;
