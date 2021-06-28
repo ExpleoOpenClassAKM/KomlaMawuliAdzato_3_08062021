@@ -91,9 +91,6 @@
 // Paramètres de mise en page de base des Items du menu "Entrées / Palts / Desserts"
 @mixin menu-Items-basic-settings {
     margin-bottom: $dim;
-    &--Title {
-        margin-bottom: 0.75*$dim;
-    }
     &--TitleUnderline {
         padding-bottom: 0.15*$dim;
         border-bottom: 0.15*$dim solid $colour-tertiary;
@@ -102,6 +99,7 @@
 
 // Paramètres des Panels du menu
 @mixin panel-designation-description-price-checked {
+    cursor: pointer;
     height: 5*$dim;
     box-shadow: 0 0 0.75*$dim $cd-shadow;
     border-radius: $dim;
@@ -150,6 +148,7 @@
     &--checkedBox {
         background-color: $colour-tertiary;
         width: 5*$dim;
+        font-size: 2*$dim;
         border-top-right-radius: $dim;
         border-bottom-right-radius: $dim;
         margin-right: 0;
@@ -157,7 +156,21 @@
         justify-content: center;
         align-items: center;
         color: $cd-accent;
-        margin-right: -5rem; // sort la boîte de la zone d'affichage par défaut
-    }   
+        margin-right: -5rem; // sort la boîte de la zone d'affichage par défaut  
+    } 
 }
+
+// couleur fond pour le hover des boutons
+@mixin btn-hover {
+    background: linear-gradient(
+        to bottom, 
+        $cd-secondary-lighten, $cd-primary-lighten 
+    );
+}
+
+// mixins pour les coeurs
+@mixin like-hover {
+    
+}
+
 

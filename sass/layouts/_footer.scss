@@ -3,19 +3,25 @@
     margin: 0;
     padding: 0;
     width: auto;
-    height: auto;
+    height: 100%;
     background-color: $cd-footerbackground;
     display: flex;
 }
 
 .footerItems {
     width: 1450px;
-    height: auto;
+    height: 100%;
     margin: auto;
     padding-left: 1.5*$dim;
-    padding-bottom: 2*$dim;
+    padding-bottom: 2.5*$dim;
     @include media0-250 {
         margin: auto;
+    }
+    @include media1000-1450 {
+        padding-bottom: 5*$dim;
+    }
+    @include media1450-sup {
+        padding-bottom: 5*$dim;
     }
     &__logo {
         font-family: 'Shrikhand', cursive, sans-serif;
@@ -26,21 +32,48 @@
     }
     &__list {
         list-style-type: none;
+        width: auto;
+        @include media1000-1450 {
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        @include media1450-sup {
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
         &--link {
             color: $cd-maincolour;
             text-decoration: none;
-            font-size: 1.25*$dim;
+            font-size: 1*$dim;
             display: block;
             line-height: normal;
             margin: 0.6*$dim 0;
-            width: 15*$dim;
+            width: 13*$dim;
             @include media0-250 {
                 font-size: $dim;
                 width: 10*$dim;
             }
+            @include media1000-1450 {
+                margin-right: 6*$dim;
+                width: auto;
+            }
+            @include media1450-sup {
+                margin-right: 6*$dim;
+                width: auto;
+            }
             &:hover {
                 text-decoration: underline;
-                width: 15*$dim;
+                width: 13*$dim;
+                @include media1000-1450 {
+                    width: auto;
+                }
+                @include media1450-sup {
+                    width: auto;
+                }
             }
         }
         &--iconutensils {
@@ -50,10 +83,22 @@
                 font-size: $dim;
                 width: auto;
             }
+            @include media1000-1450 {
+                margin-right: 0.7*$dim;
+            }
+            @include media1450-sup {
+                margin-right: 0.7*$dim;
+            }
         }
         &--iconhands {
             margin-right: $dim;
             font-size: $dim;
+            @include media1000-1450 {
+                margin-right: 0.7*$dim;
+            }
+            @include media1450-sup {
+                margin-right: 0.7*$dim;
+            }
         }
     }
 }

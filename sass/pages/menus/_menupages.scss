@@ -59,14 +59,26 @@
         margin-top: 0.5*$dim;
         margin-right: $dim;
         margin-left: 0.75*$dim;
-        font-size: 1.75*$dim;
+        font-size: 2*$dim;
         cursor: pointer;
         &--Default {
             position: relative;
+            &:hover {
+                visibility: hidden;
+            }
         }
         &--Extra {
             position: absolute;
-            z-index: -1;
+            color: transparent;
+            &:hover {
+                cursor: pointer;
+                animation: heart-filling 450ms forwards ease-in-out;              
+                color: transparent;
+                display: inline-block;
+                opacity: 0;
+                font-weight: bold;
+                z-index: 1;
+            }
         }
         @include media0-250 {
             font-size: 1.5*$dim;
@@ -130,27 +142,69 @@
     }
 }
 
+//Animantion des panels du menu au chargement de la page
+#menuItems__panel {
+    @for $i from 1 through $numberMenuItems {
+        &--#{$i} {
+            animation: LoadingMenuItems $menu-anim-dur $menu-anim-delay*$i cubic-bezier(.99,.08,.16,.96) both;
+        }
+    }
+}
+
 // Entrées
 .menuStarterBox {
     @include Tuto-Menu-ItemsBox;
+    margin-top: 3*$dim;
     &__panel {
         @include panel-designation-description-price-checked;
+        transition: padding-right 450ms ease-in-out;
+        &:hover {
+            padding-right: 5*$dim;
+        }
+        &--checkedBoxIcon {
+            transition: transform 500ms ease-in-out;
+        }
+        &:hover .fa-check-circle {
+            transform: rotate(360deg)
+        }
     }
 }
 
 // Plats
 .menuDishBox {
     @include Tuto-Menu-ItemsBox;
+    margin-top: 3*$dim;
     &__panel {
        @include panel-designation-description-price-checked;
+       transition: padding-right 450ms ease-in-out;
+        &:hover {
+            padding-right: 5*$dim;
+        }
+        &--checkedBoxIcon {
+            transition: transform 500ms ease-in-out;
+        }
+        &:hover .fa-check-circle {
+            transform: rotate(360deg)
+        }
     }
 }
 
 // Desserts
 .menuDessertBox {
     @include Tuto-Menu-ItemsBox;
+    margin-top: 3*$dim;
     &__panel {
         @include panel-designation-description-price-checked;
+        transition: padding-right 450ms ease-in-out;
+        &:hover {
+            padding-right: 5*$dim;
+        }
+        &--checkedBoxIcon {
+            transition: transform 500ms ease-in-out;
+        }
+        &:hover .fa-check-circle {
+            transform: rotate(360deg)
+        }
     }
 }
 
