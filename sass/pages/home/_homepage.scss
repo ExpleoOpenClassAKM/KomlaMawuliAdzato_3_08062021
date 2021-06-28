@@ -1,3 +1,70 @@
+//=================================================================================================
+//========================================ohmyfoodLoader===========================================
+//=================================================================================================
+
+.ohmyfoodLoader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10*$dim;
+    display: flex;
+}
+
+.ohmyfoodLoader span {
+    width: 2*$dim;
+    height: 6*$dim;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $cd-accent;
+    margin: 0 0.25*$dim;
+    animation: ohmyfoodLoading 900ms*$load-coef ease-in-out forwards;
+    animation-iteration-count: 2;
+}
+
+.ohmyfoodLoader span:nth-child(1) {
+    background-color: $colour-primary;
+    animation-delay: -800ms*$load-coef;
+}
+
+.ohmyfoodLoader span:nth-child(2) {
+    background-color: $colour-secondary;
+    animation-delay: -700ms*$load-coef;
+}
+
+.ohmyfoodLoader span:nth-child(3) {
+    background-color: $colour-tertiary;
+    animation-delay: -600ms*$load-coef;
+}
+
+.ohmyfoodLoader span:nth-child(4) {
+    background-image: $cd-linear-gradient;
+    animation-delay: -500ms*$load-coef;
+}
+
+.ohmyfoodLoader span:nth-child(5) {
+    background-color: $colour-tertiary;
+    animation-delay: -400ms*$load-coef;
+}
+
+.ohmyfoodLoader span:nth-child(6) {
+    background-color: $colour-secondary;
+    animation-delay: -300ms*$load-coef;
+}
+
+.ohmyfoodLoader span:nth-child(7) {
+    background-color: $colour-primary;
+    animation-delay: -200ms*$load-coef;
+}
+
+.ohmyfoodLoader span:nth-child(8) {
+    background-image: $cd-linear-gradient;
+    animation-delay: -100ms*$load-coef;
+}
+
+//main
 .mainLocation {
     width: 100%;
     display: flex;
@@ -377,68 +444,3 @@
 }
 
 
-//=================================================================================================
-//========================================ohmyfoodLoader===========================================
-//=================================================================================================
-
-.ohmyfoodLoader {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10*$dim;
-    display: flex;
-}
-
-.ohmyfoodLoader span {
-    width: 2*$dim;
-    height: 6*$dim;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $cd-accent;
-    margin: 0 0.25*$dim;
-    animation: ohmyfoodLoading 900ms*$load-coef ease-in-out forwards;
-    animation-iteration-count: 2;
-}
-
-.ohmyfoodLoader span:nth-child(1) {
-    background-color: $colour-primary;
-    animation-delay: -800ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(2) {
-    background-color: $colour-secondary;
-    animation-delay: -700ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(3) {
-    background-color: $colour-tertiary;
-    animation-delay: -600ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(4) {
-    background-image: $cd-linear-gradient;
-    animation-delay: -500ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(5) {
-    background-color: $colour-tertiary;
-    animation-delay: -400ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(6) {
-    background-color: $colour-secondary;
-    animation-delay: -300ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(7) {
-    background-color: $colour-primary;
-    animation-delay: -200ms*$load-coef;
-}
-
-.ohmyfoodLoader span:nth-child(8) {
-    background-image: $cd-linear-gradient;
-    animation-delay: -100ms*$load-coef;
-}
