@@ -1,7 +1,7 @@
 //=================================================================================================
 //========================================ohmyfoodLoader===========================================
 //=================================================================================================
-.loaderSpiner {
+.loaderSpinner {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -19,7 +19,7 @@
         border-bottom-color: $colour-secondary;
         background-color: $cd-accent;
         border-radius: 50%;
-        animation: loadingSpiner 3000ms ease-in forwards;  
+        animation: loadingSpinner 3000ms ease-in forwards;  
     }
     &__child {
         position: absolute;
@@ -28,13 +28,13 @@
         height: 5*$dim;
         border-radius: 50%;
         background-image: $cd-linear-gradient;
-        animation: loadingSpiner 3000ms linear forwards;
+        animation: loadingSpinner 3000ms linear forwards;
     }
     &__msg {
         position: absolute;
         align-self: center;
         z-index: 1;
-        animation: load-msg 3000ms forwards;
+        animation: load-msg 3000ms 1000ms forwards;
     }
 }
 

@@ -56,7 +56,7 @@
 //=================================================================================================
 //========================================ohmyfoodLoader===========================================
 //=================================================================================================
-@keyframes loadingSpiner {
+@keyframes loadingSpinner {
     to {
         transform: rotate(3turn);  
     } 
@@ -103,13 +103,24 @@
 //=================================================================================================
 @keyframes btn-hov {
     0% {
-        background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
-        
+        background-image: linear-gradient(0deg, lighten($colour-primary, 5%), lighten($colour-secondary, 5%));
+        border-bottom: 0.0001*$dim solid lighten($colour-primary, 5%);
+        border-right: 0.0001*$dim solid lighten($colour-primary, 5%);
+        border-top: 0.0001*$dim solid lighten($colour-secondary, 5%);
+        border-left: 0.0001*$dim solid lighten($colour-secondary, 5%);
     }
     60% {
-        background-image: lighten ((0deg, rgb(147, 86, 220), rgb(255, 121, 218)), 5%);
+        background-image: linear-gradient(0deg, lighten($colour-primary, 10%), lighten($colour-secondary, 10%));
+        border-bottom: 0.0001*$dim solid lighten($colour-primary, 10%);
+        border-right: 0.0001*$dim solid lighten($colour-primary, 10%);
+        border-top: 0.0001*$dim solid lighten($colour-secondary, 10%);
+        border-left: 0.0001*$dim solid lighten($colour-secondary, 10%);
     }
     100% {
-        background-image: lighten ((0deg, rgb(147, 86, 220), rgb(255, 121, 218)), 10%);
+        background-image: linear-gradient(0deg, lighten($colour-primary, 15%), lighten($colour-secondary, 15%));
+        border-bottom: 0.0001*$dim solid lighten($colour-primary, 15%);
+        border-right: 0.0001*$dim solid lighten($colour-primary, 15%);
+        border-top: 0.0001*$dim solid lighten($colour-secondary, 10%);
+        border-left: 0.0001*$dim solid lighten($colour-secondary, 10%);
     }
 }

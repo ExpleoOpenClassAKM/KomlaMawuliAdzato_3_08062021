@@ -4,7 +4,7 @@
     border-radius: 2.5*$dim;
     color: $cd-maincolour;
     font-size: $dim;
-    font-weight: bold;
+    font-weight: normal;
     cursor: pointer;
     background-color: $cd-localbackground;
     background-image: linear-gradient(
@@ -12,14 +12,15 @@
     rgb(147, 86, 220, 1),
     rgb(255, 121, 218, 1)
     );
-    border: 0.1*$dim solid $cd-localbackground;
-    box-shadow: 0 0.25*$dim 0.25*$dim 0 rgba(187, 156, 174, 0.26);
-
+    border-bottom: 0.0001*$dim solid $cd-primary-lighten;
+    border-right: 0.0001*$dim solid $cd-primary-lighten;
+    border-top: 0.0001*$dim solid $colour-secondary;
+    border-left: 0.0001*$dim solid $colour-secondary;
+    box-shadow: 0 0 0.5*$dim rgba(68, 61, 65, 0.6);
     &:hover {
-        animation: btn-hov 300ms ease-in-out;
-        box-shadow: 0px 0px 6px 0 $cd-footerbackground;
+        animation: btn-hov 300ms ease-in-out forwards;
+        box-shadow: 0 0 $dim $cd-footerbackground;
     }
-
     &__menu {
         padding-left: 2.5*$dim;
         padding-right: 2.5*$dim;
