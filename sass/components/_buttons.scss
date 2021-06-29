@@ -1,40 +1,29 @@
 .btn {
     width: auto;
-    padding: $dim;
+    padding: $dim 1.5*$dim $dim 1.5*$dim;
     border-radius: 2.5*$dim;
     color: $cd-maincolour;
     font-size: $dim;
-    font-weight: normal;
+    font-weight: bold;
     cursor: pointer;
     background-color: $cd-localbackground;
-    background-image: linear-gradient(
-    0deg,
-    rgb(147, 86, 220, 1),
-    rgb(255, 121, 218, 1)
-    );
+    background-image: linear-gradient(0deg, rgb(147, 86, 220, 1), rgb(255, 121, 218, 1));
     border-bottom: 0.0001*$dim solid $cd-primary-lighten;
     border-right: 0.0001*$dim solid $cd-primary-lighten;
     border-top: 0.0001*$dim solid $colour-secondary;
     border-left: 0.0001*$dim solid $colour-secondary;
-    box-shadow: 0 0 0.5*$dim rgba(68, 61, 65, 0.6);
+    box-shadow: 0 0 0.5*$dim rgba(150, 113, 134, 0.6);
     &:hover {
         animation: btn-hov 300ms ease-in-out forwards;
-        box-shadow: 0 0 $dim $cd-footerbackground;
+        box-shadow: 0 0 0.5*$dim $cd-footerbackground;
     }
     &__menu {
         padding-left: 2.5*$dim;
         padding-right: 2.5*$dim;
         margin-bottom: 5*$dim;
     }
-    //  &:hover {
-        // box-shadow: $dim/4 $dim/4 $dim/4 $dim/4 $cd-footerbackground; // ajouter animation gradiant
-    //  }
     @include media0-250 {
-        font-size: 0.75*$dim;
-        padding: 0.8*$dim;
-    }
-    @include media250-330 {
-        font-size: $dim;
-        padding: $dim;   
+        padding: $dim;
+        font-weight: normal;
     }
 }
