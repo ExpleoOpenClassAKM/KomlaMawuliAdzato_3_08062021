@@ -160,17 +160,4 @@
     } 
 }
 
-// couleur fond pour le hover des boutons
-@mixin btn-hover {
-    background: linear-gradient(
-        to bottom, 
-        $cd-secondary-lighten, $cd-primary-lighten 
-    );
-}
-
-// mixins pour les coeurs
-@mixin like-hover {
-    
-}
-
 

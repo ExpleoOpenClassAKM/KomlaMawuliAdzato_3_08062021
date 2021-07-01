@@ -122,7 +122,7 @@
   flex-direction: column;
 }
 .container__homepage {
-  animation: containerLoading 3000ms 1250ms ease-in-out both;
+  animation: containerLoading 3000ms 1000ms ease-in-out both;
 }
 
 .header {
