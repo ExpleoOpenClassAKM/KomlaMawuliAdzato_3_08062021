@@ -156,7 +156,7 @@
         justify-content: center;
         align-items: center;
         color: $cd-accent;
-        margin-right: -5rem; // sort la boîte de la zone d'affichage par défaut  
+        margin-right: -5*$dim; // sort la boîte de la zone d'affichage par défaut  
     } 
 }
 

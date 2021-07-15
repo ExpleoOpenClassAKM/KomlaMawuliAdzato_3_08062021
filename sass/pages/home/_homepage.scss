@@ -196,7 +196,6 @@
         @include media330-390 {
             display: flex;
             align-items: center;
-            overflow-y: auto;
             margin-left: $dim;
         }
         &--title {

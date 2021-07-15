@@ -611,7 +611,6 @@
   .mainTutoBoxItem__panel {
     display: flex;
     align-items: center;
-    overflow-y: auto;
     margin-left: 1rem;
   }
 }
